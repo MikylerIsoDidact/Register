@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Attendance Register</h1>
+    <form id="attendanceForm">
+        <label for="studentNo">Enter Student Number:</label>
+        <input type="text" id="studentNo" placeholder="Student Number" required>
+
+        <label for="module">Select Module:</label>
+        <select id="module" required>
+            <option value="">--Select--</option>
+            <option value="Phys123">Phys123</option>
+            <option value="Math243">Math243</option>
+        </select>
+
+        <label for="moduleCode">Module Code:</label>
+        <input type="text" id="moduleCode" placeholder="Module Code" required>
+
+        <button type="button" id="fetchDetails">Fetch Details</button>
+
+        <div id="studentInfo" style="display:none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Student Number</th>
+                        <th>Signature (Initials)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="name"></td>
+                        <td id="surname"></td>
+                        <td id="studentNoDisplay"></td>
+                        <td><input type="text" id="initials" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Submit Attendance</button>
+        </div>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
